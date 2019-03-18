@@ -1,0 +1,7 @@
+{
+  "moduleName":"$$MODULE_NAME",
+  "moduleCode":"$$MODULE_CODE",
+  "targetAppVersion":"5.5.0",
+  "frameworkVersion":"$$SDK_VERSION",
+  "platform":"$$PLATFORM"
+}

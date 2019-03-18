@@ -1,0 +1,36 @@
+{
+	"name": "jdme-rn-demo",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"android": "cp -f config/production.json jsbundles/runtime.json && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file jsbundles/salary.js --bundle-output output/android/salary.jsbundle --assets-dest output/android/ && cp -f config/local.json jsbundles/runtime.json",
+		"ios": "cp -f config/production.json jsbundles/runtime.json &&  node node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file jsbundles/salary.js --bundle-output output/ios/salary.jsbundle --assets-dest output/ios/ && cp -f config/local.json jsbundles/runtime.json",
+		"postinstall": "cp -rf node_modules/@jdreact/jdreact-core-scripts/scripts . &&  cp -rf node_modules/@jdreact/jdreact-core-scripts/patch/react-native/Libraries/* node_modules/react-native/Libraries/",
+		"web-init": "node ./node_modules/@jdreact/jdreact-core-web/local-cli/cli.js init",
+		"web-start": "node ./node_modules/@jdreact/jdreact-core-web/local-cli/cli.js start",
+		"web-bundle": "rm -rf build-web && node ./node_modules/@jdreact/jdreact-core-web/local-cli/cli.js bundle"
+	},
+	"dependencies": {
+		"@jdreact/jdreact-core-lib-lite": "^2.0.0",
+		"@jdreact/jdreact-core-linear-gradient": "^1.0.7",
+		"@jdreact/jdreact-core-scripts": "^2.0.5",
+		"antd-mobile-rn": "^2.3.3",
+		"dva": "^2.4.1",
+		"history": "^4.7.2",
+		"lodash": "~4.17.4",
+		"react": "16.0.0-alpha.12",
+		"react-addons-pure-render-mixin": "^15.5.2",
+		"react-art": "^0.15.1",
+		"react-dom": "16.0.0-alpha.12",
+		"react-native": "0.45.1",
+		"react-native-date-picker": "^2.2.1",
+		"react-native-datepicker": "^1.7.2",
+		"react-native-iphone-x-helper": "^1.2.0",
+		"react-native-shadow-cards": "^1.0.2",
+		"react-router-native": "^4.3.0"
+	},
+	"devDependencies": {
+		"@jdreact/jdreact-core-web": "^2.0.85"
+	}
+}
